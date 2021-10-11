@@ -1,0 +1,28 @@
+<ion-header >
+  <ion-navbar color ="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Medico</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openFilter()">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor ='let item of medicos' (click)="editItem(item)" >
+      <h2>{{item.value.nome}}</h2>
+      <p>Telefone: {{item.value.telefone}}</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color = "green" (click)="addmedico()"><ion-icon name="add" ></ion-icon></button>
+    </ion-fab>
+
+</ion-content>

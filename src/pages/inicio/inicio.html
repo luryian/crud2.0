@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color ="primary">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="conteudo ">
+
+  <ion-list class="cont-input">
+
+    <ion-item>
+      <ion-label floating>E-mail</ion-label>
+      <ion-input type="email" [(ngModel)] = 'email' ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input type="password" [(ngModel)] = 'senha' ></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button clear block (click)='esqueciSenha()' class="margin-bttm">Esqueci senha</button>
+
+  <button ion-button block (click)='entrar()' >Entrar</button>
+
+  <button ion-button block (click)='cadastro()'>Criar conta</button>
+
+</ion-content>

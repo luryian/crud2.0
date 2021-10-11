@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color ="primary">
+    <ion-title>{{titulo}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Nome</ion-label>
+    <ion-input type="text" [(ngModel)] = 'paciente.nome' ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Telefone</ion-label>
+    <ion-input type="text" [(ngModel)] = 'paciente.telefone' ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Cidade</ion-label>
+    <ion-input type="text" [(ngModel)] = 'paciente.cidade' ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Estado</ion-label>
+    <ion-input type="text" [(ngModel)] = 'paciente.estado' ></ion-input>
+  </ion-item>
+
+  <button ion-button (click)='salvar()'>Salvar</button>
+
+  <button ion-button color="danger" (click)='excluir()' *ngIf = 'pacienteID != undefined'>Excluir</button>
+
+</ion-content>
