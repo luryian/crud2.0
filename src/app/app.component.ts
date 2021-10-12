@@ -49,7 +49,7 @@ export class MyApp {
           // if(_usuario && _usuario.email > 0) {
             this.rootPage = HomePage;
           } else {
-            this.rootPage = 'LoginPage';
+            this.rootPage = 'InicioPage';
           }
         })
       });
