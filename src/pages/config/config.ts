@@ -21,7 +21,7 @@ export class ConfigPage {
   @ViewChild('fileUserPhoto') fileUserPhoto;
 
   item = new User();
-  foto = '/src/assets/imgs/userIMG.png';
+  foto = '/src/assets/imgs/userIMG.jpg';
   isUploaded = false;
 
   constructor(public navCtrl: NavController,
@@ -38,6 +38,7 @@ export class ConfigPage {
         content: "aguarde",
       });
       loader.present();
+
 
     console.log('ionViewDidLoad ConfigPage');
 
@@ -61,10 +62,6 @@ export class ConfigPage {
     })
   }
 
-  salvar(){
-    this.afsp.uploadImagemStorage(this.foto, '/user/' + this.item.id + '/foto.jpg');
-  }
-
   escolherFoto() {
     this.fileUserPhoto.nativeElement.click();
   }
@@ -75,4 +72,10 @@ export class ConfigPage {
       this.isUploaded = true;
     });
   }
+
+  salvar(){
+    if (this.isUploaded){
+        this.afsp.uploadImagemStorage(this.foto, '/user/' + this.item.id + '/foto.jpg');
+  }}
+
 }

@@ -58,4 +58,8 @@ export class UserProvider {
   lerLocal(){
     return this.storage.get('usuario');
   }
+
+  removeLocal() {
+    return this.storage.remove('usuario');
+  }
 }

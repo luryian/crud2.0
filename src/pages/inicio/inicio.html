@@ -1,29 +1,38 @@
 <ion-header>
-  <ion-navbar color ="primary">
-    <ion-title>Login</ion-title>
+  <ion-navbar color=green>
+    <ion-title >Login</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="conteudo ">
+  <ion-grid>
 
-  <ion-list class="cont-input">
+    <ion-row aling-items-center justify-content-center>
 
-    <ion-item>
-      <ion-label floating>E-mail</ion-label>
-      <ion-input type="email" [(ngModel)] = 'email' ></ion-input>
-    </ion-item>
+      <ion-col aling-self-center col-12 col-lg-4 col-xl-4>
 
-    <ion-item>
-      <ion-label floating>Senha</ion-label>
-      <ion-input type="password" [(ngModel)] = 'senha' ></ion-input>
-    </ion-item>
+        <ion-list class="cont-input">
 
-  </ion-list>
+          <ion-item >
+            <ion-input placeholder="E-mail" type="email" [(ngModel)] = 'email' ></ion-input>
+          </ion-item>
 
-  <button ion-button clear block (click)='esqueciSenha()' class="margin-bttm">Esqueci senha</button>
+          <ion-item>
+            <ion-input placeholder="Senha" type="password" [(ngModel)] = 'senha' ></ion-input>
+          </ion-item>
 
-  <button ion-button block (click)='entrar()' >Entrar</button>
+        </ion-list>
 
-  <button ion-button block (click)='cadastro()'>Criar conta</button>
+        <button ion-button block clear (click)='esqueciSenha()' class="margin-bttm">Esqueci minha senha</button>
+
+        <button ion-button block (click)='entrar()' class="bttn">Entrar</button>
+
+        <button ion-button block (click)='cadastro()' class="bttn">Criar conta</button>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>

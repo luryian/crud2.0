@@ -1,16 +1,32 @@
 page-inicio {
   .conteudo{
-    background: url('../../assets/imgs/back.jpeg') no-repeat center/cover transparent;
+    background: url('../../assets/imgs/Untitleddoc.png') no-repeat center/cover transparent;
+ }
+
+ .grid{
+   
+ }
+
+ .nav{
+  background-color: #00CD90;
  }
 
  .cont-input{
    ion-item{
-     color: transparent;
+     background-color: rgba(235, 235, 235, 0.8);
      margin-top: 20px;
+     border-radius: 30px;
    }
  }
 
  .margin-bttm{
-   margin-top: 30px;
+   margin-bottom: 30px;
+   border-radius: 30px;
  }
+
+ .bttn{
+   background-color: #00CD90;
+   border-radius: 30px;
+ }
+
 }

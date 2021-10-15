@@ -1,3 +1,18 @@
 page-recuperar-senha {
+  .conteudo{
+    background: url('../../assets/imgs/Untitleddoc.png') no-repeat center/cover transparent;
+ }
 
+ .cont-input{
+  ion-item{
+    background-color: rgba(235, 235, 235, 0.8);
+    margin-top: 20px;
+    border-radius: 30px;
+  }
+}
+
+.bttn{
+  background-color: #00CD90;
+  border-radius: 30px;
+}
 }

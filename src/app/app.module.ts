@@ -23,6 +23,7 @@ import { ClinicaProvider } from '../providers/clinica/clinica';
 import { firebaseConfig } from '../env/env';
 import { FirebaseStorageProvider } from '../providers/firebase-storage/firebase-storage';
 import { AngularFireStorageModule } from 'angularfire2/storage'
+import { ExportProvider } from '../providers/export/export';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage'
     MedicoProvider,
     ClinicaProvider,
     FirebaseStorageProvider,
+    ExportProvider,
 
   ]
 })

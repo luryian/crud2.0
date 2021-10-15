@@ -1,11 +1,11 @@
 import { UserProvider } from './../providers/user/user';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Provider } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/pacinte/list';
+import {Storage} from "@ionic/storage";
 
 @Component({
   templateUrl: 'app.html'
@@ -59,4 +59,9 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
+  logout() {
+    this.userProvider.removeLocal().then(_data => {
+      this.nav.setRoot('InicioPage');
+    });
+  }
 }

@@ -13,4 +13,14 @@
 
     </div>
   </ion-grid>
+
+  <ion-fab left bottom>
+    <button ion-fab color="primary"><ion-icon name="arrow-dropright"></ion-icon></button>
+    <ion-fab-list side="right">
+      <button ion-fab (click)='gerarPDF()' ><ion-icon name="document"></ion-icon></button>
+      <button ion-fab (click)='gerarExel()'><ion-icon name="apps"></ion-icon></button>
+      <button ion-fab (click)='gerarCSV()'><ion-icon name="archive"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
 </ion-content>
